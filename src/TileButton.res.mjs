@@ -6,10 +6,11 @@ import * as JsxRuntime from "react/jsx-runtime";
 
 function tileButton(props) {
   var newrecord = Caml_obj.obj_dup(props);
-  var newrecord$1 = Caml_obj.obj_dup((newrecord.onClick = undefined, newrecord.className = undefined, newrecord.children = undefined, newrecord));
-  return JsxRuntime.jsx("div", (newrecord$1.className = "text-center border-solid border-2 border-sky-50 hover:bg-sky-100 aspect-video align-middle flex place-content-center flex-col" + Core__Option.getOr(props.className, ""), newrecord$1.children = JsxRuntime.jsx("button", {
+  var newrecord$1 = Caml_obj.obj_dup((newrecord.onClick = undefined, newrecord.disabled = undefined, newrecord.className = undefined, newrecord.children = undefined, newrecord));
+  return JsxRuntime.jsx("div", (newrecord$1.className = "text-center border-solid border-2 border-sky-50 hover:bg-sky-100 align-middle flex place-content-center flex-col " + Core__Option.getOr(props.className, ""), newrecord$1.children = JsxRuntime.jsx("button", {
                     children: Core__Option.getOr(props.children, JsxRuntime.jsx(JsxRuntime.Fragment, {})),
-                    className: "h-full w-full",
+                    className: "h-full w-full disabled:opacity-50 disabled:bg-slate-200",
+                    disabled: props.disabled,
                     onClick: props.onClick
                   }), newrecord$1));
 }
