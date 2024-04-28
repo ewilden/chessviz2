@@ -1,11 +1,11 @@
-let ranks = Belt.Array.range(1, 8)
-let files = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+let ranks = Chess.ranks
+let files = Chess.files
 type kbPhase =
   | Nothing
   | File(char)
   | Rank(char, int)
 
-let fromChar = c => Js.String.fromCharCode(c->Char.code)
+let fromChar = Chess.fromChar
 let nbsp = "\u00A0"
 
 @react.component
