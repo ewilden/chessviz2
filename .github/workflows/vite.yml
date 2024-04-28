@@ -46,8 +46,8 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            public
-            .cache
+            dist
+            lib
           key: ${{ runner.os }}-vite-build-${{ hashFiles('public') }}
           restore-keys: |
             ${{ runner.os }}-vite-build-
