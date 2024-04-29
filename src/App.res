@@ -15,5 +15,8 @@ let make = () => {
         setSquare(_ => Chess.randomSquare())
       }}
     />
+    <p className="mt-4">
+      {React.string("Hint: squares whose files and ranks have the same parity are dark.")}
+    </p>
   </div>
 }

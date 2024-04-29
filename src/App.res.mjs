@@ -47,6 +47,10 @@ function App(props) {
                                 return Chess.randomSquare();
                               });
                         })
+                    }),
+                JsxRuntime.jsx("p", {
+                      children: "Hint: squares whose files and ranks have the same parity are dark.",
+                      className: "mt-4"
                     })
               ],
               className: "p-6"
